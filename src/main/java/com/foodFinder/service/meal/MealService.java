@@ -16,4 +16,6 @@ public interface MealService {
     Set<Meal> findByRestaurantId(Long id);
 
     void delete(Meal meal);
+
+    Set<Meal> findByOrderId(Long id);
 }

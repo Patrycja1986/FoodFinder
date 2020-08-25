@@ -52,6 +52,12 @@ public class MealController {
         return byRestaurantId.stream().map(this::convertToDto).collect(Collectors.toSet());
     }
 
+    @GetMapping("/order/{id}")
+    public Set<MealDTO> findByOrderId(@PathVariable Long id){
+        Set<Meal> byOrderId = mealService.findByOrderId(id);
+        return byOrderId.stream().map(this::convertToDto).collect(Collectors.toSet());
+    }
+
     @DeleteMapping("/meal/{id}")
     public void delete(@PathVariable Long id){
         Meal meal = mealService.findById(id).orElse(new Meal("0", "0", 0L));

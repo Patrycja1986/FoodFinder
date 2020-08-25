@@ -10,4 +10,6 @@ import java.util.Set;
 public interface MealRepository extends CrudRepository<Meal,Long> {
 
     Set<Meal> findByRestaurantId(Long id);
+
+    Set<Meal> findByOrderId(Long id);
 }

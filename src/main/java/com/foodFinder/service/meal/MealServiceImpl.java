@@ -47,4 +47,9 @@ public class MealServiceImpl implements MealService {
     public void delete(Meal meal) {
         mealRepository.delete(meal);
     }
+
+    @Override
+    public Set<Meal> findByOrderId(Long id) {
+        return mealRepository.findByOrderId(id);
+    }
 }
