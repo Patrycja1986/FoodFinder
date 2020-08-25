@@ -3,10 +3,7 @@ package com.foodFinder.model.customer;
 import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.order.Order;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -20,11 +17,14 @@ public class Customer extends BaseEntity {
     private String customerCity;
     private String customerEmail;
 
-    @ManyToMany
+    /*@ManyToMany
     @JoinTable(name = "customer_orders",
             joinColumns = @JoinColumn(name="customer_id"),
             inverseJoinColumns = @JoinColumn(name = "order_id"))
-    private Set<Order> CustomerOrders;
+    private Set<Order> CustomerOrders;*/
+
+    @OneToMany(mappedBy = "customer")
+    private Set<Order> customerOrders;
 
     public Customer() {
     }
@@ -96,10 +96,10 @@ public class Customer extends BaseEntity {
     }
 
     public Set<Order> getCustomerOrders() {
-        return CustomerOrders;
+        return customerOrders;
     }
 
     public void setCustomerOrders(Set<Order> customerOrders) {
-        CustomerOrders = customerOrders;
+        this.customerOrders = customerOrders;
     }
 }

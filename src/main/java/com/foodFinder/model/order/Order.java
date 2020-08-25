@@ -16,12 +16,15 @@ public class Order extends BaseEntity {
     inverseJoinColumns = @JoinColumn(name = "meal_id"))
     private Set<Meal> orderedMeals;*/
 
-    @ManyToMany(mappedBy = "CustomerOrders")
-    private Set<Customer> purchaser;
+ /* @ManyToMany(mappedBy = "CustomerOrders")
+    private Set<Customer> purchaser;*/
+
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
 
     @OneToMany(mappedBy = "order")
     private Set<OrderedMeals> orderedMeals;
-
 
 
     public Order() {
@@ -35,11 +38,11 @@ public class Order extends BaseEntity {
         this.orderedMeals = orderedMeals;
     }
 
-    public Set<Customer> getPurchaser() {
-        return purchaser;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setPurchaser(Set<Customer> purchaser) {
-        this.purchaser = purchaser;
+    public void setPurchaser(Customer customer) {
+        this.customer = customer;
     }
 }
