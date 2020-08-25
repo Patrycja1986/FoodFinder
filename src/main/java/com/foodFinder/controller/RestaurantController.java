@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -26,12 +27,13 @@ public class RestaurantController {
     }
 
     @PostMapping
-    public void addRestaurant(@RequestBody Restaurant restaurant) {
+    public void addRestaurant(@RequestBody RestaurantDTO restaurantDTO) throws ParseException {
+        Restaurant restaurant = convertToEntity(restaurantDTO);
         restaurantService.save(restaurant);
     }
 
     @GetMapping("/restaurant/{id}")
-    public RestaurantDTO findById(@PathVariable Long id){
+    public RestaurantDTO findById(@PathVariable Long id) {
         Optional<Restaurant> byId = restaurantService.findById(id);
         return byId
                 .map(this::convertToDto)
@@ -39,21 +41,26 @@ public class RestaurantController {
     }
 
     @GetMapping
-    public Set<RestaurantDTO> findAll(){
+    public Set<RestaurantDTO> findAll() {
         Set<Restaurant> all = restaurantService.findAll();
         return all.stream().map(this::convertToDto).collect(Collectors.toSet());
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id){
+    public void delete(@PathVariable Long id) {
         Restaurant byName = restaurantService.findById(id)
-                .orElse(new Restaurant("0","0",
-                "0","0","0"));
+                .orElse(new Restaurant("0", "0",
+                        "0", "0", "0"));
         restaurantService.delete(byName);
     }
 
     private RestaurantDTO convertToDto(Restaurant restaurant) {
         return modelMapper.map(restaurant, RestaurantDTO.class);
+    }
+
+    private Restaurant convertToEntity(RestaurantDTO restaurantDTO) throws ParseException {
+        Restaurant restaurant = modelMapper.map(restaurantDTO, Restaurant.class);
+        return restaurant;
     }
 
 }

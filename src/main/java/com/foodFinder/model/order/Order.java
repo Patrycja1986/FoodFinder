@@ -2,7 +2,7 @@ package com.foodFinder.model.order;
 
 import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.customer.Customer;
-import com.foodFinder.model.meal.Meal;
+import com.foodFinder.model.orderedMeals.OrderedMeals;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -10,11 +10,11 @@ import java.util.Set;
 @Entity
 public class Order extends BaseEntity {
 
-    /*@ManyToMany
+   /* @ManyToMany
     @JoinTable(name = "ordered_meals",
     joinColumns = @JoinColumn(name = "order_id"),
     inverseJoinColumns = @JoinColumn(name = "meal_id"))
-    private Set<Meal> orderedMeals;*/
+    private Set<Meal> meals;*/
 
  /* @ManyToMany(mappedBy = "CustomerOrders")
     private Set<Customer> purchaser;*/

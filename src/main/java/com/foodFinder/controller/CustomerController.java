@@ -19,7 +19,8 @@ public class CustomerController {
     }
 
     @PostMapping
-    private void addCustomer(@RequestBody Customer customer){
+    private void addCustomer(@RequestBody Customer customer) {
+
         customerService.save(customer);
     }
     @GetMapping("/customer/{id}")

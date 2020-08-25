@@ -1,8 +1,7 @@
 package com.foodFinder.model.meal;
 
 import com.foodFinder.common.BaseEntity;
-import com.foodFinder.model.order.Order;
-import com.foodFinder.model.order.OrderedMeals;
+import com.foodFinder.model.orderedMeals.OrderedMeals;
 import com.foodFinder.model.restaurant.Restaurant;
 
 import javax.persistence.*;
@@ -18,8 +17,8 @@ public class Meal extends BaseEntity {
     @ManyToOne
     @JoinColumn(name ="restaurant_id")
     private Restaurant restaurant;
-
-    /*@ManyToMany(mappedBy="orderedMeals")
+/*
+    @ManyToMany(mappedBy="meals")
     private Set<Order> orders;*/
 
     @OneToMany(mappedBy = "meal")

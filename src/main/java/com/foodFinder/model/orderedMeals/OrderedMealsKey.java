@@ -1,4 +1,4 @@
-package com.foodFinder.model.order;
+package com.foodFinder.model.orderedMeals;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

@@ -1,6 +1,7 @@
-package com.foodFinder.model.order;
+package com.foodFinder.model.orderedMeals;
 
 import com.foodFinder.model.meal.Meal;
+import com.foodFinder.model.order.Order;
 
 import javax.persistence.*;
 

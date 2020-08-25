@@ -17,5 +17,5 @@ public interface MealService {
 
     void delete(Meal meal);
 
-    Set<Meal> findByOrderId(Long id);
+
 }
