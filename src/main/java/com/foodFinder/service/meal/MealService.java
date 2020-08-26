@@ -7,7 +7,7 @@ import java.util.Set;
 
 public interface MealService {
     
-    void save(Meal meal);
+    void save(Meal meal, Long id);
 
     Optional<Meal> findById(Long id);
 

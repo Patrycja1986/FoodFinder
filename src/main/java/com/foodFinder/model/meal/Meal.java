@@ -5,6 +5,7 @@ import com.foodFinder.model.orderedMeals.OrderedMeals;
 import com.foodFinder.model.restaurant.Restaurant;
 
 import javax.persistence.*;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -33,6 +34,13 @@ public class Meal extends BaseEntity {
         this.mealDescription = mealDescription;
         this.mealPrice = mealPrice;
     }
+    public Meal(String mealName, String mealDescription, Long mealPrice, Restaurant restaurant) {
+        this.mealName = mealName;
+        this.mealDescription = mealDescription;
+        this.mealPrice = mealPrice;
+        this.restaurant=restaurant;
+    }
+
 
     public String getMealName() {
         return mealName;

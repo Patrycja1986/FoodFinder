@@ -29,10 +29,10 @@ public class MealController {
         this.mealService=mealService;
     }
 
-    @PostMapping
-    public void addMeal(@RequestBody MealDTO mealDTO) throws ParseException {
+    @PostMapping("/meal/{restaurantId}")
+    public void addMeal(@RequestBody MealDTO mealDTO,@PathVariable Long restaurantId) throws ParseException {
         Meal meal = convertToEntity(mealDTO);
-        mealService.save(meal);
+        mealService.save(meal,restaurantId);
     }
 
     @GetMapping("/meal/{id}" )
