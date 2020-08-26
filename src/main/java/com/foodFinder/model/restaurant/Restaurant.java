@@ -2,6 +2,7 @@ package com.foodFinder.model.restaurant;
 
 import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.meal.Meal;
+import com.foodFinder.model.order.Order;
 
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -19,6 +20,9 @@ public class Restaurant extends BaseEntity {
 
      @OneToMany( mappedBy = "restaurant")
      private Set<Meal> meals = new HashSet<>();
+
+   @OneToMany(mappedBy = "restaurant")
+     private Set<Order> orders;
 
 
      public Restaurant() {
@@ -79,5 +83,13 @@ public class Restaurant extends BaseEntity {
 
      public void setMeals(Set<Meal> meals) {
           this.meals = meals;
+     }
+
+    public Set<Order> getOrders() {
+          return orders;
+     }
+
+     public void setOrders(Set<Order> orders) {
+          this.orders = orders;
      }
 }

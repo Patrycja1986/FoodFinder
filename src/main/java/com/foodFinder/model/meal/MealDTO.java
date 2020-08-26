@@ -7,6 +7,7 @@ public class MealDTO {
     private String mealNameDTO;
     private String mealDescriptionDTO;
     private Long mealPriceDTO;
+    private Long restaurantId;
 
     public String getMealNameDTO() {
         return mealNameDTO;
@@ -32,4 +33,11 @@ public class MealDTO {
         this.mealPriceDTO = mealPriceDTO;
     }
 
+    public Long getRestaurantId() {
+        return restaurantId;
+    }
+
+    public void setRestaurantId(Long restaurantId) {
+        this.restaurantId = restaurantId;
+    }
 }

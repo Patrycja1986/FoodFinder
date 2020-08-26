@@ -2,27 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6bc1e3-5b31-494c-84f0-be6f78bdde81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/OrderedMealsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/repository/OrderedMealsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/orderedMeals/OrderedMealsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/orderedMeals/OrderedMealsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/CustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/MealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/MealController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/Meal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/OrderedMeals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/orderedMeals/OrderedMeals.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/OrderedMealsKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/orderedMeals/OrderedMealsKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/Restaurant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/RestaurantDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/RestaurantDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/repository/MealRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/repository/MealRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/RestaurantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/RestaurantController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/customer/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/Meal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/Meal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/order/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/order/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/Restaurant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/Restaurant.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/RestaurantDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/RestaurantDTO.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +55,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -122,7 +114,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597937572907</updated>
-      <workItem from="1597937576764" duration="38181000" />
+      <workItem from="1597937576764" duration="46469000" />
     </task>
     <servers />
   </component>
@@ -130,22 +122,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1598203282558">
+    <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1598352118569">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="23" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1598203282558" />
+    <state x="275" y="23" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1598352118569" />
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598203114400">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1598203114400" />
-    <state x="829" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1598347956637">
+    <state x="829" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1598427176736">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="829" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598347956637" />
+    <state x="829" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1598427176736" />
     <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1598204502473">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="224" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1598204502473" />
+    <state x="113" y="120" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598351686066">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="113" y="120" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598351686066" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1598020389833">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -154,22 +150,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="557" y="258" width="260" height="211" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598259866415" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598348011372">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598427450332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598348011372" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598348011372">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598427450332" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598427450332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598348011372" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598348011372">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598427450332" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598427450332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598348011372" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598348011372">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598427450332" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598427450332">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598348011372" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598427450332" />
     <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1597938216790">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

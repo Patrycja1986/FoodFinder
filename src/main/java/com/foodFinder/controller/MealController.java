@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -29,7 +30,8 @@ public class MealController {
     }
 
     @PostMapping
-    public void addMeal(@RequestBody Meal meal){
+    public void addMeal(@RequestBody MealDTO mealDTO) throws ParseException {
+        Meal meal = convertToEntity(mealDTO);
         mealService.save(meal);
     }
 
@@ -60,6 +62,11 @@ public class MealController {
 
     private MealDTO convertToDto(Meal meal) {
         return modelMapper.map(meal, MealDTO.class);
+    }
+
+    private Meal convertToEntity(MealDTO mealDTO) throws ParseException {
+        Meal meal = modelMapper.map(mealDTO, Meal.class);
+        return meal;
     }
 
 

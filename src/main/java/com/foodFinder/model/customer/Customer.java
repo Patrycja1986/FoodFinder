@@ -23,8 +23,8 @@ public class Customer extends BaseEntity {
             inverseJoinColumns = @JoinColumn(name = "order_id"))
     private Set<Order> CustomerOrders;*/
 
-    @OneToMany(mappedBy = "customer")
-    private Set<Order> customerOrders;
+    /*@OneToMany(mappedBy = "customer")
+    private Set<Order> customerOrders;*/
 
     public Customer() {
     }
@@ -95,11 +95,11 @@ public class Customer extends BaseEntity {
         this.customerEmail = customerEmail;
     }
 
-    public Set<Order> getCustomerOrders() {
+   /* public Set<Order> getCustomerOrders() {
         return customerOrders;
     }
 
     public void setCustomerOrders(Set<Order> customerOrders) {
         this.customerOrders = customerOrders;
-    }
+    }*/
 }
