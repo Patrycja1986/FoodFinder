@@ -1,10 +1,13 @@
 package com.foodFinder.controller;
 
+import com.foodFinder.exceptions.restaurant.RestaurantNotFoundException;
 import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.model.restaurant.RestaurantDTO;
 import com.foodFinder.service.restaurant.RestaurantService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -35,9 +38,13 @@ public class RestaurantController {
     @GetMapping("/restaurant/{id}")
     public RestaurantDTO findById(@PathVariable Long id) {
         Optional<Restaurant> byId = restaurantService.findById(id);
-        return byId
-                .map(this::convertToDto)
-                .orElseThrow(RuntimeException::new);
+        if (byId.isPresent()) {
+            return byId
+                    .map(this::convertToDto)
+                    .orElseThrow(RuntimeException::new);
+        } else {
+            throw new RestaurantNotFoundException("Restaurant by id= "+id+" not found");
+        }
     }
 
     @GetMapping

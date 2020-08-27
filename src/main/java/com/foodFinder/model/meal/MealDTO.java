@@ -5,33 +5,31 @@ import com.foodFinder.model.restaurant.RestaurantDTO;
 
 public class MealDTO {
 
-    private String mealNameDTO;
-    private String mealDescriptionDTO;
-    private Long mealPriceDTO;
+    private String mealName;
+    private String mealDescription;
+    private Long mealPrice;
 
-
-    public String getMealNameDTO() {
-        return mealNameDTO;
+    public String getMealName() {
+        return mealName;
     }
 
-    public void setMealNameDTO(String mealNameDTO) {
-        this.mealNameDTO = mealNameDTO;
+    public void setMealName(String mealName) {
+        this.mealName = mealName;
     }
 
-    public String getMealDescriptionDTO() {
-        return mealDescriptionDTO;
+    public String getMealDescription() {
+        return mealDescription;
     }
 
-    public void setMealDescriptionDTO(String mealDescriptionDTO) {
-        this.mealDescriptionDTO = mealDescriptionDTO;
+    public void setMealDescription(String mealDescription) {
+        this.mealDescription = mealDescription;
     }
 
-    public Long getMealPriceDTO() {
-        return mealPriceDTO;
+    public Long getMealPrice() {
+        return mealPrice;
     }
 
-    public void setMealPriceDTO(Long mealPriceDTO) {
-        this.mealPriceDTO = mealPriceDTO;
+    public void setMealPrice(Long mealPrice) {
+        this.mealPrice = mealPrice;
     }
-
 }
