@@ -7,6 +7,8 @@ public class RestaurantDTO {
     private String restaurantPostCodeDTO;
     private String restaurantCityDTO;
 
+    public RestaurantDTO(){}
+
     public String getRestaurantNameDTO() {
         return restaurantNameDTO;
     }
