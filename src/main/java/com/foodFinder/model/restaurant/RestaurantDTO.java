@@ -1,52 +1,51 @@
 package com.foodFinder.model.restaurant;
 
 public class RestaurantDTO {
-    private String restaurantNameDTO;
-    private String restaurantStreetNameDTO;
-    private String restaurantStreetNumberDTO;
-    private String restaurantPostCodeDTO;
-    private String restaurantCityDTO;
+    private String restaurantName;
+    private String restaurantStreetName;
+    private String restaurantStreetNumber;
+    private String restaurantPostCode;
+    private String restaurantCity;
 
     public RestaurantDTO(){}
 
-    public String getRestaurantNameDTO() {
-        return restaurantNameDTO;
+    public String getRestaurantName() {
+        return restaurantName;
     }
 
-    public void setRestaurantNameDTO(String restaurantNameDTO) {
-        this.restaurantNameDTO = restaurantNameDTO;
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
     }
 
-    public String getRestaurantStreetNameDTO() {
-        return restaurantStreetNameDTO;
+    public String getRestaurantStreetName() {
+        return restaurantStreetName;
     }
 
-    public void setRestaurantStreetNameDTO(String restaurantStreetNameDTO) {
-        this.restaurantStreetNameDTO = restaurantStreetNameDTO;
+    public void setRestaurantStreetName(String restaurantStreetName) {
+        this.restaurantStreetName = restaurantStreetName;
     }
 
-    public String getRestaurantStreetNumberDTO() {
-        return restaurantStreetNumberDTO;
+    public String getRestaurantStreetNumber() {
+        return restaurantStreetNumber;
     }
 
-    public void setRestaurantStreetNumberDTO(String restaurantStreetNumberDTO) {
-        this.restaurantStreetNumberDTO = restaurantStreetNumberDTO;
+    public void setRestaurantStreetNumber(String restaurantStreetNumber) {
+        this.restaurantStreetNumber = restaurantStreetNumber;
     }
 
-    public String getRestaurantPostCodeDTO() {
-        return restaurantPostCodeDTO;
+    public String getRestaurantPostCode() {
+        return restaurantPostCode;
     }
 
-    public void setRestaurantPostCodeDTO(String restaurantPostCodeDTO) {
-        this.restaurantPostCodeDTO = restaurantPostCodeDTO;
+    public void setRestaurantPostCode(String restaurantPostCode) {
+        this.restaurantPostCode = restaurantPostCode;
     }
 
-    public String getRestaurantCityDTO() {
-        return restaurantCityDTO;
+    public String getRestaurantCity() {
+        return restaurantCity;
     }
 
-    public void setRestaurantCityDTO(String restaurantCityDTO) {
-        this.restaurantCityDTO = restaurantCityDTO;
+    public void setRestaurantCity(String restaurantCity) {
+        this.restaurantCity = restaurantCity;
     }
-
 }
