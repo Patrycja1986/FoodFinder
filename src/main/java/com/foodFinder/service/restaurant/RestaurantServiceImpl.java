@@ -28,10 +28,6 @@ public class RestaurantServiceImpl implements RestaurantService {
     }
 
     @Override
-    public void update(Restaurant restaurant) {
-    }
-
-    @Override
     public void delete(Restaurant restaurant) {
         repository.delete(restaurant);
     }

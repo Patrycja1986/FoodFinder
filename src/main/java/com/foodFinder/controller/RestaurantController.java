@@ -35,15 +35,36 @@ public class RestaurantController {
         restaurantService.save(restaurant);
     }
 
+    @PutMapping("/restaurant/{id}")
+    public void updateRestaurant(@RequestBody RestaurantDTO restaurantDTO, @PathVariable Long id) {
+
+        Optional<Restaurant> byId = restaurantService.findById(id);
+        if (byId.isPresent()) {
+            Restaurant restaurant = byId.get();
+            restaurant.setRestaurantName(restaurantDTO.getRestaurantName());
+            restaurant.setRestaurantStreetName(restaurantDTO.getRestaurantStreetName());
+            restaurant.setRestaurantStreetNumber(restaurantDTO.getRestaurantStreetNumber());
+            restaurant.setRestaurantPostCode(restaurantDTO.getRestaurantPostCode());
+            restaurant.setRestaurantCity(restaurantDTO.getRestaurantCity());
+            restaurantService.save(restaurant);
+
+        } else {
+            throw new RestaurantNotFoundException("Restaurant by id= " + id + " not found");
+        }
+
+
+    }
+
     @GetMapping("/restaurant/{id}")
     public RestaurantDTO findById(@PathVariable Long id) {
+
         Optional<Restaurant> byId = restaurantService.findById(id);
         if (byId.isPresent()) {
             return byId
                     .map(this::convertToDto)
                     .orElseThrow(RuntimeException::new);
         } else {
-            throw new RestaurantNotFoundException("Restaurant by id= "+id+" not found");
+            throw new RestaurantNotFoundException("Restaurant by id= " + id + " not found");
         }
     }
 

@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd6bc1e3-5b31-494c-84f0-be6f78bdde81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/exceptions/ApplicationExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/exceptions/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/exceptions/restaurant/RestaurantNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/RestaurantController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/controller/RestaurantController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/restaurant/RestaurantService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/restaurant/RestaurantService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/restaurant/RestaurantServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/restaurant/RestaurantServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/RestaurantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/controller/RestaurantController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/service/restaurant/RestaurantService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/service/restaurant/RestaurantService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/service/restaurant/RestaurantServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/service/restaurant/RestaurantServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597937572907</updated>
-      <workItem from="1597937576764" duration="64706000" />
+      <workItem from="1597937576764" duration="72088000" />
     </task>
     <servers />
   </component>
@@ -147,22 +146,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="557" y="258" width="260" height="211" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598259866415" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598525472270">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1598694098366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598525472270" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598525472270">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1598694098366" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1598694098366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598525472270" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598525472269">
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1598694098366" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1598694098366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598525472269" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598525472270">
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1598694098366" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1598694098366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598525472270" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1598694098366" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1598517341616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
