@@ -1,13 +1,11 @@
 package com.foodFinder.controller;
 
-import com.foodFinder.exceptions.restaurant.RestaurantNotFoundException;
+import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
 import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.model.restaurant.RestaurantDTO;
 import com.foodFinder.service.restaurant.RestaurantService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
@@ -49,7 +47,7 @@ public class RestaurantController {
             restaurantService.save(restaurant);
 
         } else {
-            throw new RestaurantNotFoundException("Restaurant by id= " + id + " not found");
+            throw new ObjectNotFoundException("Restaurant by id= " + id + " not found");
         }
 
 
@@ -64,7 +62,7 @@ public class RestaurantController {
                     .map(this::convertToDto)
                     .orElseThrow(RuntimeException::new);
         } else {
-            throw new RestaurantNotFoundException("Restaurant by id= " + id + " not found");
+            throw new ObjectNotFoundException("Restaurant by id= " + id + " not found");
         }
     }
 

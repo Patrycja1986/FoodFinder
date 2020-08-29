@@ -20,15 +20,20 @@ public class MealServiceImpl implements MealService {
     private RestaurantRepository restaurantRepository;
 
     @Autowired
-    public MealServiceImpl(MealRepository mealRepository){
+    public MealServiceImpl(MealRepository mealRepository) {
 
-        this.mealRepository=mealRepository;
+        this.mealRepository = mealRepository;
     }
 
     @Override
     public void save(Meal meal, Long id) {
         Restaurant restaurant = restaurantRepository.findById(id).orElse(null);
         meal.setRestaurant(restaurant);
+        mealRepository.save(meal);
+    }
+
+    @Override
+    public void save(Meal meal) {
         mealRepository.save(meal);
     }
 
@@ -54,5 +59,6 @@ public class MealServiceImpl implements MealService {
     public void delete(Meal meal) {
         mealRepository.delete(meal);
     }
+
 
 }

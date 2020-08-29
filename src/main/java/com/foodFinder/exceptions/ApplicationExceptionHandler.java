@@ -1,6 +1,6 @@
 package com.foodFinder.exceptions;
 
-import com.foodFinder.exceptions.restaurant.RestaurantNotFoundException;
+import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ApplicationExceptionHandler {
 
   @ExceptionHandler
-    public ResponseEntity<ErrorResponse> handleException(RestaurantNotFoundException exc){
+    public ResponseEntity<ErrorResponse> handleException(ObjectNotFoundException exc){
         ErrorResponse error= new ErrorResponse();
 
         error.setStatus(HttpStatus.NOT_FOUND.value());

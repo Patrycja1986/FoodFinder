@@ -18,4 +18,5 @@ public interface MealService {
     void delete(Meal meal);
 
 
+    void save(Meal meal);
 }
