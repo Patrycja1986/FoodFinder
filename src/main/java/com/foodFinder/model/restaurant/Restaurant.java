@@ -12,80 +12,79 @@ import java.util.Set;
 @Entity
 public class Restaurant extends BaseEntity {
 
-     private String restaurantName;
-     private String restaurantStreetName;
-     private String restaurantStreetNumber;
-     private String restaurantPostCode;
-     private String restaurantCity;
+    private String restaurantName;
+    private String restaurantStreetName;
+    private String restaurantStreetNumber;
+    private String restaurantPostCode;
+    private String restaurantCity;
 
-     @OneToMany( mappedBy = "restaurant")
-     private Set<Meal> meals = new HashSet<>();
+    @OneToMany(mappedBy = "restaurant")
+    private Set<Meal> meals;
 
-   @OneToMany(mappedBy = "restaurant")
-     private Set<Order> orders;
+    @OneToMany(mappedBy = "restaurant")
+    private Set<Order> orders;
 
+    public Restaurant() {
+    }
 
-     public Restaurant() {
-     }
+    public Restaurant(String restaurantName, String restaurantStreetName, String restaurantStreetNumber,
+                      String restaurantPostCode, String restaurantCity) {
+        this.restaurantName = restaurantName;
+        this.restaurantStreetName = restaurantStreetName;
+        this.restaurantStreetNumber = restaurantStreetNumber;
+        this.restaurantPostCode = restaurantPostCode;
+        this.restaurantCity = restaurantCity;
+    }
 
-     public  Restaurant(String restaurantName,String restaurantStreetName, String restaurantStreetNumber,
-                        String restaurantPostCode, String restaurantCity){
-          this.restaurantName=restaurantName;
-          this.restaurantStreetName=restaurantStreetName;
-          this.restaurantStreetNumber=restaurantStreetNumber;
-          this.restaurantPostCode=restaurantPostCode;
-          this.restaurantCity=restaurantCity;
-     }
+    public String getRestaurantName() {
+        return restaurantName;
+    }
 
-     public String getRestaurantName() {
-          return restaurantName;
-     }
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
+    }
 
-     public void setRestaurantName(String restaurantName) {
-          this.restaurantName = restaurantName;
-     }
+    public String getRestaurantStreetName() {
+        return restaurantStreetName;
+    }
 
-     public String getRestaurantStreetName() {
-          return restaurantStreetName;
-     }
+    public void setRestaurantStreetName(String restaurantStreetName) {
+        this.restaurantStreetName = restaurantStreetName;
+    }
 
-     public void setRestaurantStreetName(String restaurantStreetName) {
-          this.restaurantStreetName = restaurantStreetName;
-     }
+    public String getRestaurantStreetNumber() {
+        return restaurantStreetNumber;
+    }
 
-     public String getRestaurantStreetNumber() {
-          return restaurantStreetNumber;
-     }
+    public void setRestaurantStreetNumber(String restaurantStreetNumber) {
+        this.restaurantStreetNumber = restaurantStreetNumber;
+    }
 
-     public void setRestaurantStreetNumber(String restaurantStreetNumber) {
-          this.restaurantStreetNumber = restaurantStreetNumber;
-     }
+    public String getRestaurantPostCode() {
+        return restaurantPostCode;
+    }
 
-     public String getRestaurantPostCode() {
-          return restaurantPostCode;
-     }
+    public void setRestaurantPostCode(String restaurantPostCode) {
+        this.restaurantPostCode = restaurantPostCode;
+    }
 
-     public void setRestaurantPostCode(String restaurantPostCode) {
-          this.restaurantPostCode = restaurantPostCode;
-     }
+    public String getRestaurantCity() {
+        return restaurantCity;
+    }
 
-     public String getRestaurantCity() {
-          return restaurantCity;
-     }
+    public void setRestaurantCity(String restaurantCity) {
+        this.restaurantCity = restaurantCity;
+    }
 
-     public void setRestaurantCity(String restaurantCity) {
-          this.restaurantCity = restaurantCity;
-     }
+    public Set<Meal> getMeals() {
+        return meals;
+    }
 
-     public Set<Meal> getMeals() {
-          return meals;
-     }
+    public void setMeals(Set<Meal> meals) {
+        this.meals = meals;
+    }
 
-     public void setMeals(Set<Meal> meals) {
-          this.meals = meals;
-     }
-
-    public Set<Order> getOrders() {
+     public Set<Order> getOrders() {
           return orders;
      }
 

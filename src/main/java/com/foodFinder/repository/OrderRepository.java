@@ -8,5 +8,7 @@ import java.util.Set;
 
 @Repository
 public interface OrderRepository extends CrudRepository<Order,Long> {
+
     Set<Order> findByRestaurantId(Long id);
+    Set<Order> findByCustomerId(Long id);
 }

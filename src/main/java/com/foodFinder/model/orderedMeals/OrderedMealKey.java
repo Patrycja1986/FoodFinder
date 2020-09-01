@@ -5,7 +5,7 @@ import javax.persistence.Embeddable;
 import java.io.Serializable;
 
 @Embeddable
-public class OrderedMealsKey implements Serializable {
+public class OrderedMealKey implements Serializable {
 
     @Column(name = "order_id")
     private Long orderId;
@@ -13,7 +13,7 @@ public class OrderedMealsKey implements Serializable {
     @Column(name = "meal_id")
     private Long mealId;
 
-    public OrderedMealsKey() {
+    public OrderedMealKey() {
     }
 
     public Long getOrderId() {

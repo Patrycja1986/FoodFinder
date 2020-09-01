@@ -1,11 +1,10 @@
 package com.foodFinder.model.meal;
 
 import com.foodFinder.common.BaseEntity;
-import com.foodFinder.model.orderedMeals.OrderedMeals;
+import com.foodFinder.model.orderedMeals.OrderedMeal;
 import com.foodFinder.model.restaurant.Restaurant;
 
 import javax.persistence.*;
-import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -18,15 +17,12 @@ public class Meal extends BaseEntity {
     @ManyToOne
     @JoinColumn(name ="restaurant_id")
     private Restaurant restaurant;
-/*
-    @ManyToMany(mappedBy="meals")
-    private Set<Order> orders;*/
 
     @OneToMany(mappedBy = "meal")
-    private Set<OrderedMeals> orderedMeals;
+    private Set<OrderedMeal> orderedMeals;
+
 
     public Meal(){
-
     }
 
     public Meal(String mealName, String mealDescription, Long mealPrice) {
@@ -74,11 +70,11 @@ public class Meal extends BaseEntity {
         this.restaurant = restaurant;
     }
 
-    public Set<OrderedMeals> getOrderedMeals() {
+    public Set<OrderedMeal> getOrderedMeals() {
         return orderedMeals;
     }
 
-    public void setOrderedMeals(Set<OrderedMeals> orderedMeals) {
+    public void setOrderedMeals(Set<OrderedMeal> orderedMeals) {
         this.orderedMeals = orderedMeals;
     }
 }

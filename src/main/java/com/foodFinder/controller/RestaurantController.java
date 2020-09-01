@@ -74,10 +74,10 @@ public class RestaurantController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        Restaurant byName = restaurantService.findById(id)
+        Restaurant byId = restaurantService.findById(id)
                 .orElse(new Restaurant("0", "0",
                         "0", "0", "0"));
-        restaurantService.delete(byName);
+        restaurantService.delete(byId);
     }
 
     private RestaurantDTO convertToDto(Restaurant restaurant) {

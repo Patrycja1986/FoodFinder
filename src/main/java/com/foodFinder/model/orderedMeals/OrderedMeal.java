@@ -6,10 +6,10 @@ import com.foodFinder.model.order.Order;
 import javax.persistence.*;
 
 @Entity
-public class OrderedMeals {
+public class OrderedMeal {
 
     @EmbeddedId
-    OrderedMealsKey id;
+    OrderedMealKey id;
 
     @ManyToOne
             @MapsId("meal_id")
@@ -23,19 +23,19 @@ public class OrderedMeals {
 
     int mealQuantity;
 
-    public OrderedMeals() {
+    public OrderedMeal() {
     }
-    public OrderedMeals(Order order,Meal meal,int mealQuantity){
-        this.order=order;
+    public OrderedMeal(Meal meal, Order order,int mealQuantity){
         this.meal=meal;
+        this.order=order;
         this.mealQuantity=mealQuantity;
     }
 
-    public OrderedMealsKey getId() {
+    public OrderedMealKey getId() {
         return id;
     }
 
-    public void setId(OrderedMealsKey id) {
+    public void setId(OrderedMealKey id) {
         this.id = id;
     }
 
