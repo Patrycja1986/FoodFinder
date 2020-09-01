@@ -29,7 +29,7 @@ public class MealController {
         this.mealService = mealService;
     }
 
-    @PostMapping("/meal/{restaurantId}")
+    @PostMapping("/meal/restaurant/{restaurantId}")
     public void addMeal(@RequestBody MealDTO mealDTO, @PathVariable Long restaurantId) throws ParseException {
         Meal meal = convertToEntity(mealDTO);
         mealService.save(meal, restaurantId);
@@ -58,7 +58,7 @@ public class MealController {
         if (byId.isPresent()) {
             return byId.map(this::convertToDto).orElseThrow(RuntimeException::new);
         } else {
-            throw new ObjectNotFoundException("No Meals. Restaurant by id= " + id + " not found");
+            throw new ObjectNotFoundException("Meal by id= "+id+" not found");
         }
     }
 
@@ -68,7 +68,7 @@ public class MealController {
         return all.stream().map(this::convertToDto).collect(Collectors.toSet());
     }
 
-    @GetMapping("/restaurant/{id}")
+    @GetMapping("meal/restaurant/{id}")
     public Set<MealDTO> findByRestaurantId(@PathVariable Long id) {
 
         Set<Meal> byRestaurantId = mealService.findByRestaurantId(id);

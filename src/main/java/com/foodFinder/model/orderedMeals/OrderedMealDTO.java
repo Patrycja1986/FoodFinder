@@ -5,8 +5,7 @@ import com.foodFinder.model.order.OrderDTO;
 
 
 public class OrderedMealDTO {
-    private String mealName;
-    private Long mealPrice;
+    private MealDTO meal;
     private int quantity;
 
     public int getQuantity() {
@@ -17,19 +16,11 @@ public class OrderedMealDTO {
         this.quantity = quantity;
     }
 
-    public String getMealName() {
-        return mealName;
+    public MealDTO getMeal() {
+        return meal;
     }
 
-    public void setMealName(String mealName) {
-        this.mealName = mealName;
-    }
-
-    public Long getMealPrice() {
-        return mealPrice;
-    }
-
-    public void setMealPrice(Long mealPrice) {
-        this.mealPrice = mealPrice;
+    public void setMeal(MealDTO meal) {
+        this.meal = meal;
     }
 }

@@ -72,7 +72,7 @@ public class RestaurantController {
         return all.stream().map(this::convertToDto).collect(Collectors.toSet());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/restaurant/{id}")
     public void delete(@PathVariable Long id) {
         Restaurant byId = restaurantService.findById(id)
                 .orElse(new Restaurant("0", "0",

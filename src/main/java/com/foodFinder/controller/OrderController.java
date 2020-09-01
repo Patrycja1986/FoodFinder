@@ -1,5 +1,6 @@
 package com.foodFinder.controller;
 
+import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
 import com.foodFinder.model.order.Order;
 import com.foodFinder.model.order.OrderDTO;
 import com.foodFinder.model.orderedMeals.OrderedMeal;
@@ -37,15 +38,22 @@ public class OrderController {
         orderService.save(order);
     }
 
-    @PostMapping("/order/{customerId}/{restaurantId}")
+    @PostMapping("/order/customer/{customerId}/restaurant/{restaurantId}")
     public void addOrder(@PathVariable Long customerId, @PathVariable Long restaurantId){
         orderService.save(customerId,restaurantId);
 
     }
 
     @GetMapping("/order/{id}")
-    public Optional<Order> findById(@PathVariable Long id) {
-        return orderService.findById(id);
+    public OrderDTO findById(@PathVariable Long id) {
+        Optional<Order> byId = orderService.findById(id);
+        if (byId.isPresent()) {
+            return byId
+                    .map(this::convertToDto)
+                    .orElseThrow(RuntimeException::new);
+        } else {
+            throw new ObjectNotFoundException("Order by id= " + id + " not found");
+        }
     }
 
     @GetMapping
@@ -64,7 +72,7 @@ public class OrderController {
         return orderService.findByCustomerId(id);
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/order/{id}")
     public void delete(@PathVariable Long id) {
         Order byId = orderService.findById(id)
                 .orElse(new Order());

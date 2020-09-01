@@ -1,5 +1,6 @@
 package com.foodFinder.service.meal;
 
+import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
 import com.foodFinder.model.meal.Meal;
 import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.repository.MealRepository;
@@ -27,9 +28,14 @@ public class MealServiceImpl implements MealService {
 
     @Override
     public void save(Meal meal, Long id) {
-        Restaurant restaurant = restaurantRepository.findById(id).orElse(null);
-        meal.setRestaurant(restaurant);
-        mealRepository.save(meal);
+        Optional<Restaurant> restaurant = restaurantRepository.findById(id);
+        if(restaurant.isPresent()){
+
+            meal.setRestaurant(restaurant.get());
+            mealRepository.save(meal);
+        }else{
+            throw new ObjectNotFoundException("Unable to create meal. Restaurant by id= "+id+" not found");
+        }
     }
 
     @Override

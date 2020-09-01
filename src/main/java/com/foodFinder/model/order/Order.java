@@ -46,4 +46,11 @@ public Order(Customer customer,Restaurant restaurant){
         this.restaurant = restaurant;
     }
 
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
 }

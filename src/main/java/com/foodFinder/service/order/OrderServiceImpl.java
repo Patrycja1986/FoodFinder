@@ -1,5 +1,6 @@
 package com.foodFinder.service.order;
 
+import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
 import com.foodFinder.model.customer.Customer;
 import com.foodFinder.model.order.Order;
 import com.foodFinder.model.orderedMeals.OrderedMeal;
@@ -51,12 +52,24 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Set<Order> findByRestaurantId(Long id) {
-        return orderRepository.findByRestaurantId(id);
+
+        Optional<Restaurant> byId = restaurantRepository.findById(id);
+        if(byId.isPresent()){
+            return orderRepository.findByRestaurantId(id);
+        }else{
+            throw new ObjectNotFoundException("Restaurant by id= "+id+ " not found");
+        }
     }
 
     @Override
     public Set<Order> findByCustomerId(Long id) {
-        return orderRepository.findByCustomerId(id);
+
+        Optional<Customer> byId = customerRepository.findById(id);
+        if(byId.isPresent()){
+            return orderRepository.findByCustomerId(id);
+        }else{
+            throw new ObjectNotFoundException("Customer by id= "+id+ " not found");
+        }
     }
 
     @Override
@@ -66,11 +79,19 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public void save(Long customerId, Long restaurantId) {
-        Customer customer = customerRepository.findById(customerId).get();
-        Restaurant restaurant=restaurantRepository.findById(restaurantId).get();
-        Order order= new Order(customer,restaurant);
-        orderRepository.save(order);
+        Optional<Customer> customerById = customerRepository.findById(customerId);
+        Optional<Restaurant> restaurantById = restaurantRepository.findById(restaurantId);
 
+        if(customerById.isPresent()){
+            if(restaurantById.isPresent()){
+                Order order= new Order(customerById.get(), restaurantById.get());
+                orderRepository.save(order);
+            }else{
+                throw new ObjectNotFoundException("Restaurant by id= "+restaurantId+ " not found");
+            }
+        }else{
+            throw new ObjectNotFoundException("Customer by id= "+customerId+ " not found");
+        }
     }
 
 }

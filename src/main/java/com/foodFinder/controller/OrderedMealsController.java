@@ -30,7 +30,7 @@ public class OrderedMealsController {
         this.service = service;
     }
 
-    @PostMapping("{mealId}/{orderId}")
+    @PostMapping("/meal/{mealId}/order/{orderId}")
     public void addOrderedMeals(@RequestParam int quantity,@PathVariable Long mealId, @PathVariable Long orderId) throws ParseException {
 
         service.save(quantity,mealId, orderId);
