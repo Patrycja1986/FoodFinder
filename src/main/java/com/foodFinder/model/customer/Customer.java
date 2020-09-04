@@ -2,6 +2,7 @@ package com.foodFinder.model.customer;
 
 import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.order.Order;
+import com.foodFinder.model.orderedMeals.OrderedMeal;
 
 import javax.persistence.*;
 import java.util.Set;

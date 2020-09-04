@@ -23,34 +23,19 @@ public class OrderedMealsController {
     private OrderedMealsService service;
 
     @Autowired
-    ModelMapper modelMapper;
-
-    @Autowired
     public OrderedMealsController(OrderedMealsService service) {
         this.service = service;
     }
 
-    @PostMapping("/meal/{mealId}/order/{orderId}")
-    public void addOrderedMeals(@RequestParam int quantity,@PathVariable Long mealId, @PathVariable Long orderId) throws ParseException {
+    @PostMapping("/meal/{mealId}/order/{orderId}/quantity/{quantity}")
+    public void addOrderedMeals(@PathVariable Long mealId, @PathVariable Long orderId,@PathVariable Integer quantity) throws ParseException {
 
         service.save(quantity,mealId, orderId);
     }
 
     @GetMapping("/order/{id}")
-    public Set<MealDTO> findByOrderId(@PathVariable Long id){
-        Set<Meal> byOrderId = service.findByOrderId(id);
-        return byOrderId.stream().map(this::convertToDto).collect(Collectors.toSet());
+    public Set<OrderedMealDTO> findByOrderId(@PathVariable Long id){
+      return service.findByOrderId(id);
     }
 
-    private MealDTO convertToDto(Meal meal) {
-        return modelMapper.map(meal, MealDTO.class);
-    }
-
-    private OrderedMealDTO convertToDto(OrderedMeal orderedMeal) {
-        return modelMapper.map(orderedMeal, OrderedMealDTO.class);
-    }
-
-    private OrderedMeal convertToEntity(OrderedMealDTO orderedMealDTO) throws ParseException {
-        return modelMapper.map(orderedMealDTO, OrderedMeal.class);
-    }
 }

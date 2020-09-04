@@ -6,18 +6,26 @@ import com.foodFinder.model.order.OrderDTO;
 
 public class OrderedMealDTO {
     private MealDTO meal;
-    private int quantity;
+    private Integer mealQuantity;
 
     public int getQuantity() {
-        return quantity;
+        return mealQuantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int mealQuantity) {
+        this.mealQuantity = mealQuantity;
     }
 
     public MealDTO getMeal() {
         return meal;
+    }
+
+    public Integer getMealQuantity() {
+        return mealQuantity;
+    }
+
+    public void setMealQuantity(Integer mealQuantity) {
+        this.mealQuantity = mealQuantity;
     }
 
     public void setMeal(MealDTO meal) {

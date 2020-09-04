@@ -1,22 +1,26 @@
 package com.foodFinder.service.meal;
 
 import com.foodFinder.model.meal.Meal;
+import com.foodFinder.model.meal.MealDTO;
 
+import java.text.ParseException;
 import java.util.Optional;
 import java.util.Set;
 
 public interface MealService {
     
-    void save(Meal meal, Long id);
+    void save(MealDTO meal, Long id) throws ParseException;
 
-    Optional<Meal> findById(Long id);
+    MealDTO findById(Long id);
 
-    Set<Meal> findAll();
+    Set<MealDTO> findAll();
 
-    Set<Meal> findByRestaurantId(Long id);
+    Set<MealDTO> findByRestaurantId(Long id);
 
-    void delete(Meal meal);
+    void delete(Long id);
 
 
     void save(Meal meal);
+
+    void updateMeal(MealDTO mealDTO, Long id);
 }

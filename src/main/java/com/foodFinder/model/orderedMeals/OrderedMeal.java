@@ -1,27 +1,28 @@
 package com.foodFinder.model.orderedMeals;
 
+import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.meal.Meal;
 import com.foodFinder.model.order.Order;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class OrderedMeal {
-
-    @EmbeddedId
-    OrderedMealKey id;
+public class OrderedMeal extends BaseEntity {
 
     @ManyToOne
-            @MapsId("meal_id")
             @JoinColumn(name="meal_id")
     Meal meal;
 
     @ManyToOne
-            @MapsId("order_id")
             @JoinColumn(name = "order_id")
     Order order;
 
-    int mealQuantity;
+    public void setMealQuantity(Integer mealQuantity) {
+        this.mealQuantity = mealQuantity;
+    }
+
+    Integer mealQuantity;
 
     public OrderedMeal() {
     }
@@ -30,15 +31,6 @@ public class OrderedMeal {
         this.order=order;
         this.mealQuantity=mealQuantity;
     }
-
-    public OrderedMealKey getId() {
-        return id;
-    }
-
-    public void setId(OrderedMealKey id) {
-        this.id = id;
-    }
-
     public Meal getMeal() {
         return meal;
     }

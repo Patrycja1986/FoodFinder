@@ -1,6 +1,6 @@
 package com.foodFinder.controller;
 
-import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
+import com.foodFinder.exceptions.ObjectNotFoundException;
 import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.model.restaurant.RestaurantDTO;
 import com.foodFinder.service.restaurant.RestaurantService;
@@ -17,9 +17,6 @@ import java.util.stream.Collectors;
 @RequestMapping(value = "/restaurants")
 public class RestaurantController {
 
-    @Autowired
-    private ModelMapper modelMapper;
-
     private final RestaurantService restaurantService;
 
     @Autowired
@@ -29,63 +26,27 @@ public class RestaurantController {
 
     @PostMapping
     public void addRestaurant(@RequestBody RestaurantDTO restaurantDTO) throws ParseException {
-        Restaurant restaurant = convertToEntity(restaurantDTO);
-        restaurantService.save(restaurant);
+        restaurantService.save(restaurantDTO);
     }
 
     @PutMapping("/restaurant/{id}")
     public void updateRestaurant(@RequestBody RestaurantDTO restaurantDTO, @PathVariable Long id) {
-
-        Optional<Restaurant> byId = restaurantService.findById(id);
-        if (byId.isPresent()) {
-            Restaurant restaurant = byId.get();
-            restaurant.setRestaurantName(restaurantDTO.getRestaurantName());
-            restaurant.setRestaurantStreetName(restaurantDTO.getRestaurantStreetName());
-            restaurant.setRestaurantStreetNumber(restaurantDTO.getRestaurantStreetNumber());
-            restaurant.setRestaurantPostCode(restaurantDTO.getRestaurantPostCode());
-            restaurant.setRestaurantCity(restaurantDTO.getRestaurantCity());
-            restaurantService.save(restaurant);
-
-        } else {
-            throw new ObjectNotFoundException("Restaurant by id= " + id + " not found");
-        }
-
-
+        restaurantService.updateRestaurant(restaurantDTO,id);
     }
 
     @GetMapping("/restaurant/{id}")
     public RestaurantDTO findById(@PathVariable Long id) {
-
-        Optional<Restaurant> byId = restaurantService.findById(id);
-        if (byId.isPresent()) {
-            return byId
-                    .map(this::convertToDto)
-                    .orElseThrow(RuntimeException::new);
-        } else {
-            throw new ObjectNotFoundException("Restaurant by id= " + id + " not found");
-        }
+        return restaurantService.findById(id);
     }
 
     @GetMapping
     public Set<RestaurantDTO> findAll() {
-        Set<Restaurant> all = restaurantService.findAll();
-        return all.stream().map(this::convertToDto).collect(Collectors.toSet());
+       return restaurantService.findAll();
     }
 
     @DeleteMapping("/restaurant/{id}")
     public void delete(@PathVariable Long id) {
-        Restaurant byId = restaurantService.findById(id)
-                .orElse(new Restaurant("0", "0",
-                        "0", "0", "0"));
-        restaurantService.delete(byId);
-    }
-
-    private RestaurantDTO convertToDto(Restaurant restaurant) {
-        return modelMapper.map(restaurant, RestaurantDTO.class);
-    }
-
-    private Restaurant convertToEntity(RestaurantDTO restaurantDTO) throws ParseException {
-        return modelMapper.map(restaurantDTO, Restaurant.class);
+      restaurantService.delete(id);
     }
 
 }

@@ -1,19 +1,16 @@
 package com.foodFinder.controller;
 
-import com.foodFinder.exceptions.restaurant.ObjectNotFoundException;
+import com.foodFinder.exceptions.MealsFromDifferentRestaurantsException;
+import com.foodFinder.exceptions.ObjectNotFoundException;
 import com.foodFinder.model.order.Order;
 import com.foodFinder.model.order.OrderDTO;
 import com.foodFinder.model.orderedMeals.OrderedMeal;
-import com.foodFinder.model.orderedMeals.OrderedMealDTO;
-import com.foodFinder.model.restaurant.Restaurant;
-import com.foodFinder.model.restaurant.RestaurantDTO;
 import com.foodFinder.service.order.OrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.text.ParseException;
-import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -34,57 +31,43 @@ public class OrderController {
 
     @PostMapping
     public void addOrder(@RequestBody OrderDTO orderDTO) throws ParseException {
-        Order order = convertToEntity(orderDTO);
-        orderService.save(order);
+        orderService.save(orderDTO);
     }
 
     @PostMapping("/order/customer/{customerId}/restaurant/{restaurantId}")
-    public void addOrder(@PathVariable Long customerId, @PathVariable Long restaurantId){
-        orderService.save(customerId,restaurantId);
+    public void addOrder(@PathVariable Long customerId, @PathVariable Long restaurantId) {
+        orderService.save(customerId, restaurantId);
 
+    }
+    @PostMapping("/order/customer/{customerId}")
+    public void addOrder(@PathVariable Long customerId) {
+        orderService.save(customerId);
     }
 
     @GetMapping("/order/{id}")
     public OrderDTO findById(@PathVariable Long id) {
-        Optional<Order> byId = orderService.findById(id);
-        if (byId.isPresent()) {
-            return byId
-                    .map(this::convertToDto)
-                    .orElseThrow(RuntimeException::new);
-        } else {
-            throw new ObjectNotFoundException("Order by id= " + id + " not found");
-        }
+        return orderService.findById(id);
     }
 
     @GetMapping
     public Set<OrderDTO> findAll() {
-        Set<Order> all = orderService.findAll();
-        return all.stream().map(this::convertToDto).collect(Collectors.toSet());
+        return orderService.findAll();
     }
 
     @GetMapping("/restaurant/{id}")
-    public Set<Order> findByRestaurantId(@PathVariable Long id) {
-        return orderService.findByRestaurantId(id);
+    public Set<OrderDTO> findByRestaurantId(@PathVariable Long id) {
+       return orderService.findByRestaurantId(id);
     }
 
     @GetMapping("/customer/{id}")
-    public Set<Order> findByCustomerId(@PathVariable Long id) {
+    public Set<OrderDTO> findByCustomerId(@PathVariable Long id) {
         return orderService.findByCustomerId(id);
     }
 
     @DeleteMapping("/order/{id}")
     public void delete(@PathVariable Long id) {
-        Order byId = orderService.findById(id)
-                .orElse(new Order());
-       orderService.delete(byId);
-    }
 
-    private OrderDTO convertToDto(Order order) {
-        return modelMapper.map(order, OrderDTO.class);
-    }
-
-    private Order convertToEntity(OrderDTO orderDTO) throws ParseException {
-        return modelMapper.map(orderDTO, Order.class);
+        orderService.delete(id);
     }
 
 }

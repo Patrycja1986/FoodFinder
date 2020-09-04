@@ -1,4 +1,4 @@
-package com.foodFinder.exceptions.restaurant;
+package com.foodFinder.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException {
 

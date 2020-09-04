@@ -1,16 +1,20 @@
 package com.foodFinder.service.customer;
 
+import com.foodFinder.common.ConversionManager;
 import com.foodFinder.model.customer.Customer;
+import com.foodFinder.model.customer.CustomerDTO;
 
-import java.util.Optional;
+import java.text.ParseException;
 import java.util.Set;
 
 public interface CustomerService {
-    void save(Customer customer);
+    void save(CustomerDTO customer) throws ParseException;
 
-    Optional<Customer> findById(Long id);
+    CustomerDTO findById(Long id);
 
-    Set<Customer> findAll();
+    Set<CustomerDTO> findAll();
 
-    void delete(Customer customer);
+    void delete(Long customer);
+
+    void updateCustomer(CustomerDTO customerDTO, Long id);
 }

@@ -9,5 +9,5 @@ import java.util.Set;
 
 @Repository
 public interface OrderedMealsRepository extends CrudRepository<OrderedMeal,Long> {
-    Set<Meal> findByOrderId(Long id);
+    Set<OrderedMeal> findByOrderId(Long id);
 }
