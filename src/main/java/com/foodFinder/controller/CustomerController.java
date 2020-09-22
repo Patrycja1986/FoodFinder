@@ -32,12 +32,12 @@ public class CustomerController {
         customerService.save(customerDTO);
     }
 
-    @PutMapping("/customer/{id}")
+    @PutMapping("/{id}")
     public void updateCustomer(@RequestBody CustomerDTO customerDTO, @PathVariable Long id) {
         customerService.updateCustomer(customerDTO, id);
     }
 
-    @GetMapping("/customer/{id}")
+    @GetMapping("/{id}")
     public CustomerDTO findById(@PathVariable Long id) {
         return customerService.findById(id);
     }
@@ -47,7 +47,7 @@ public class CustomerController {
         return customerService.findAll();
     }
 
-    @DeleteMapping("/customer/{id}")
+    @DeleteMapping("/{id}")
     public void deleteCustomer(@PathVariable Long id) {
         customerService.delete(id);
     }
