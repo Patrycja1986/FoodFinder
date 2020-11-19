@@ -11,10 +11,12 @@ import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.repository.CustomerRepository;
 import com.foodFinder.repository.OrderRepository;
 import com.foodFinder.repository.RestaurantRepository;
+import com.foodFinder.service.email.EmailService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.HashSet;
 import java.util.Optional;
@@ -34,6 +36,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private CustomerRepository customerRepository;
+
+    @Autowired
+    private EmailService emailService;
 
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository){
@@ -115,13 +120,16 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void save(Long customerId) {
+    public void save(Long customerId) throws IOException {
         Optional<Customer> customerById = customerRepository.findById(customerId);
 
         if (customerById.isPresent()){
+            String customerEmail = customerById.get().getCustomerEmail();
             Order order=new Order();
             order.setCustomer(customerById.get());
             orderRepository.save(order);
+            emailService.sendText("patrycja.guz1986@gmail.com",customerEmail,"Confirmation","Confirmation");
+
         }else{
             throw new ObjectNotFoundException("Customer by id= "+customerId+ " not found");
         }

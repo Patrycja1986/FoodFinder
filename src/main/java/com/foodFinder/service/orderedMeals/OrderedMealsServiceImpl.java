@@ -52,7 +52,6 @@ public class OrderedMealsServiceImpl implements OrderedMealsService {
     @Override
     public void save(int quantity, Long mealId, Long orderId) {
         Set<OrderedMeal> orderedMeals = repository.findByOrderId(orderId);
-
         Optional<Order> orderById = orderRepository.findById(orderId);
         Optional<Meal> mealbyId = mealRepository.findById(mealId);
 
@@ -69,6 +68,14 @@ public class OrderedMealsServiceImpl implements OrderedMealsService {
             orderedMeals.add(orderedMeal);
             repository.save(orderedMeal);
 
+    }
+
+    @Override
+    public void save(Long mealId,Integer quantity) {
+        Optional<Meal> byId = mealRepository.findById(mealId);
+        Meal meal = byId.get();
+        OrderedMeal orderedMeal= new OrderedMeal(byId.get());
+        repository.save(orderedMeal);
     }
 
 

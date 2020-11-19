@@ -34,7 +34,7 @@ public class MealController {
         mealService.updateMeal(mealDTO,id);
     }
 
-    @GetMapping("/meal/{id}")
+    @GetMapping("/{id}")
     public MealDTO findById(@PathVariable Long id) {
         return mealService.findById(id);
     }
@@ -44,7 +44,7 @@ public class MealController {
        return mealService.findAll();
     }
 
-    @GetMapping("meal/restaurant/{id}")
+    @GetMapping("/restaurant/{id}")
     public Set<MealDTO> findByRestaurantId(@PathVariable Long id) {
         return mealService.findByRestaurantId(id);
     }

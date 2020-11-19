@@ -4,7 +4,7 @@ import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.model.restaurant.RestaurantDTO;
 
 public class MealDTO {
-
+private Long id;
     private String mealName;
     private String mealDescription;
     private Long mealPrice;
@@ -31,5 +31,13 @@ public class MealDTO {
 
     public void setMealPrice(Long mealPrice) {
         this.mealPrice = mealPrice;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

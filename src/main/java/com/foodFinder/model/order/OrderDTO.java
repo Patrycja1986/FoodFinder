@@ -7,7 +7,7 @@ import com.foodFinder.model.restaurant.RestaurantDTO;
 import java.util.Set;
 
 public class OrderDTO {
-
+private Long id;
     private CustomerDTO customer;
     private RestaurantDTO restaurant;
     private Set<OrderedMealDTO> meals;
@@ -34,5 +34,13 @@ public class OrderDTO {
 
     public void setMeals(Set<OrderedMealDTO> meals) {
         this.meals = meals;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -2,6 +2,7 @@ package com.foodFinder.controller;
 
 import com.foodFinder.model.meal.Meal;
 import com.foodFinder.model.meal.MealDTO;
+import com.foodFinder.model.order.Order;
 import com.foodFinder.model.orderedMeals.OrderedMeal;
 import com.foodFinder.model.orderedMeals.OrderedMealDTO;
 import com.foodFinder.model.restaurant.Restaurant;
@@ -31,6 +32,18 @@ public class OrderedMealsController {
     public void addOrderedMeals(@PathVariable Long mealId, @PathVariable Long orderId,@PathVariable Integer quantity) throws ParseException {
 
         service.save(quantity,mealId, orderId);
+    }
+    @PostMapping
+    public void addOrderedMeals(@RequestBody OrderedMealDTO orderedMealDTO) throws ParseException {
+
+        Integer mealQuantity = orderedMealDTO.getMealQuantity();
+        Long mealId = orderedMealDTO.getMeal().getId();
+        Long id = orderedMealDTO.getOrder().getId();
+        if(id==null){
+            Order order= new Order();
+            service.save(mealQuantity,mealId,order.getId());
+        }
+        service.save(mealQuantity,mealId,id);
     }
 
     @GetMapping("/order/{id}")

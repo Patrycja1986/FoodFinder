@@ -5,6 +5,7 @@ import com.foodFinder.model.order.OrderDTO;
 import com.foodFinder.model.orderedMeals.OrderedMeal;
 import com.foodFinder.model.orderedMeals.OrderedMealDTO;
 
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.Optional;
 import java.util.Set;
@@ -23,5 +24,5 @@ public interface OrderService {
     void delete(Long id);
 
     void save(Long customerId, Long restaurantId);
-    void save(Long customerId);
+    void save(Long customerId) throws IOException;
 }

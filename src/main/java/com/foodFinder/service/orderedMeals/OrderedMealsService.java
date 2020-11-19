@@ -11,4 +11,6 @@ public interface OrderedMealsService {
     Set<OrderedMealDTO> findByOrderId(Long id);
 
     void save(int quantity,Long mealId, Long orderId);
+
+    void save(Long mealId, Integer quantity);
 }

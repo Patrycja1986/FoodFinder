@@ -6,6 +6,7 @@ import com.foodFinder.model.order.OrderDTO;
 
 public class OrderedMealDTO {
     private MealDTO meal;
+    private OrderDTO order;
     private Integer mealQuantity;
 
     public int getQuantity() {
@@ -30,5 +31,13 @@ public class OrderedMealDTO {
 
     public void setMeal(MealDTO meal) {
         this.meal = meal;
+    }
+
+    public OrderDTO getOrder() {
+        return order;
+    }
+
+    public void setOrder(OrderDTO order) {
+        this.order = order;
     }
 }

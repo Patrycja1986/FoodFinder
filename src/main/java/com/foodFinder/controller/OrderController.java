@@ -1,19 +1,14 @@
 package com.foodFinder.controller;
 
-import com.foodFinder.exceptions.MealsFromDifferentRestaurantsException;
-import com.foodFinder.exceptions.ObjectNotFoundException;
-import com.foodFinder.model.order.Order;
 import com.foodFinder.model.order.OrderDTO;
-import com.foodFinder.model.orderedMeals.OrderedMeal;
 import com.foodFinder.service.order.OrderService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.text.ParseException;
-import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(value = "/orders")
@@ -40,7 +35,7 @@ public class OrderController {
 
     }
     @PostMapping("/order/customer/{customerId}")
-    public void addOrder(@PathVariable Long customerId) {
+    public void addOrder(@PathVariable Long customerId) throws IOException {
         orderService.save(customerId);
     }
 

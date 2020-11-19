@@ -29,12 +29,12 @@ public class RestaurantController {
         restaurantService.save(restaurantDTO);
     }
 
-    @PutMapping("/restaurant/{id}")
+    @PutMapping("/{id}")
     public void updateRestaurant(@RequestBody RestaurantDTO restaurantDTO, @PathVariable Long id) {
         restaurantService.updateRestaurant(restaurantDTO,id);
     }
 
-    @GetMapping("/restaurant/{id}")
+    @GetMapping("/{id}")
     public RestaurantDTO findById(@PathVariable Long id) {
         return restaurantService.findById(id);
     }
@@ -44,7 +44,7 @@ public class RestaurantController {
        return restaurantService.findAll();
     }
 
-    @DeleteMapping("/restaurant/{id}")
+    @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
       restaurantService.delete(id);
     }

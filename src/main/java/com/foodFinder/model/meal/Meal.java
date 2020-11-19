@@ -77,4 +77,5 @@ public class Meal extends BaseEntity {
     public void setOrderedMeals(Set<OrderedMeal> orderedMeals) {
         this.orderedMeals = orderedMeals;
     }
+
 }

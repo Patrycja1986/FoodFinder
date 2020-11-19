@@ -26,6 +26,9 @@ public class OrderedMeal extends BaseEntity {
 
     public OrderedMeal() {
     }
+    public OrderedMeal(Meal  meal){
+        this.meal=meal;
+    }
     public OrderedMeal(Meal meal, Order order,int mealQuantity){
         this.meal=meal;
         this.order=order;

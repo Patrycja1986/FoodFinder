@@ -1,6 +1,7 @@
 package com.foodFinder.model.restaurant;
 
 public class RestaurantDTO {
+    private Long id;
     private String restaurantName;
     private String restaurantStreetName;
     private String restaurantStreetNumber;
@@ -47,5 +48,13 @@ public class RestaurantDTO {
 
     public void setRestaurantCity(String restaurantCity) {
         this.restaurantCity = restaurantCity;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
