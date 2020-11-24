@@ -17,6 +17,9 @@ public class BaseEntity {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
+    @Version
+    private Long version;
+
     public Long getId() {
         return id;
     }
@@ -31,6 +34,10 @@ public class BaseEntity {
 
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
+    }
+
+    public Long getVersion() {
+        return version;
     }
 
     @PrePersist

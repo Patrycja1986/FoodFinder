@@ -95,7 +95,7 @@ public class MealServiceImpl implements MealService {
 
     @Override
     public void delete(Long id) {
-        Meal meal = mealRepository.findById(id).orElse(new Meal("0", "0", 0L));
+        Meal meal = mealRepository.findById(id).orElse(new Meal("0", "0", 0L,0L));
         mealRepository.delete(meal);
     }
 

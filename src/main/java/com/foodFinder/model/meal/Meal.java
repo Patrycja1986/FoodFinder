@@ -13,6 +13,7 @@ public class Meal extends BaseEntity {
     private String mealName;
     private String mealDescription;
     private Long mealPrice;
+    private Long mealQuantity;
 
     @ManyToOne
     @JoinColumn(name ="restaurant_id")
@@ -25,17 +26,21 @@ public class Meal extends BaseEntity {
     public Meal(){
     }
 
-    public Meal(String mealName, String mealDescription, Long mealPrice) {
+    public Meal(String mealName, String mealDescription, Long mealPrice, Long mealQuantity) {
         this.mealName = mealName;
         this.mealDescription = mealDescription;
         this.mealPrice = mealPrice;
+        this.mealQuantity=mealQuantity;
     }
-    public Meal(String mealName, String mealDescription, Long mealPrice, Restaurant restaurant) {
+    
+    public Meal(String mealName, String mealDescription, Long mealPrice,Long mealQuantity, Restaurant restaurant) {
         this.mealName = mealName;
         this.mealDescription = mealDescription;
         this.mealPrice = mealPrice;
+        this.mealQuantity=mealQuantity;
         this.restaurant=restaurant;
     }
+
 
 
     public String getMealName() {
@@ -78,4 +83,11 @@ public class Meal extends BaseEntity {
         this.orderedMeals = orderedMeals;
     }
 
+    public Long getMealQuantity() {
+        return mealQuantity;
+    }
+
+    public void setMealQuantity(Long mealQuantity) {
+        this.mealQuantity = mealQuantity;
+    }
 }

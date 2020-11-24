@@ -2,6 +2,7 @@ package com.foodFinder.model.restaurant;
 
 public class RestaurantDTO {
     private Long id;
+    private Long version;
     private String restaurantName;
     private String restaurantStreetName;
     private String restaurantStreetNumber;
@@ -9,6 +10,10 @@ public class RestaurantDTO {
     private String restaurantCity;
 
     public RestaurantDTO(){}
+
+    public Long getVersion() {
+        return version;
+    }
 
     public String getRestaurantName() {
         return restaurantName;

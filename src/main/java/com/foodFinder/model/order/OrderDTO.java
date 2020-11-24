@@ -8,9 +8,14 @@ import java.util.Set;
 
 public class OrderDTO {
 private Long id;
+private Long version;
     private CustomerDTO customer;
     private RestaurantDTO restaurant;
     private Set<OrderedMealDTO> meals;
+
+    public Long getVersion() {
+        return version;
+    }
 
     public CustomerDTO getCustomer() {
         return customer;

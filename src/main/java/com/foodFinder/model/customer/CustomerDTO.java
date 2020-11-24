@@ -2,6 +2,8 @@ package com.foodFinder.model.customer;
 
 public class CustomerDTO {
 
+    private Long id;
+    private Long version;
     private String customerName;
     private String customerSurname;
     private String customerStreetName;
@@ -9,6 +11,14 @@ public class CustomerDTO {
     private String customerPostCode;
     private String customerCity;
     private String customerEmail;
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
 
     public String getCustomerName() {
         return customerName;

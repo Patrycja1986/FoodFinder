@@ -5,9 +5,21 @@ import com.foodFinder.model.order.OrderDTO;
 
 
 public class OrderedMealDTO {
+
+    private Long id;
+    private Long version;
     private MealDTO meal;
     private OrderDTO order;
     private Integer mealQuantity;
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getVersion() {
+        return version;
+    }
 
     public int getQuantity() {
         return mealQuantity;

@@ -97,4 +97,5 @@ public class Customer extends BaseEntity {
     public void setCustomerOrders(Set<Order> customerOrders) {
         this.customerOrders = customerOrders;
     }
+
 }
