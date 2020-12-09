@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd6bc1e3-5b31-494c-84f0-be6f78bdde81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/foodFinder/OptimisticLockingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/common/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/common/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/CustomerDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/customer/CustomerDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/Meal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/Meal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/meal/MealDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/order/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/orderedMeals/OrderedMealDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/orderedMeals/OrderedMealDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/RestaurantDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/model/restaurant/RestaurantDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/foodFinder/service/meal/MealServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/Application$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/Application$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/common/BaseEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/common/BaseEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/customer/CustomerDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/customer/CustomerDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/Meal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/Meal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/meal/MealDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/order/OrderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/order/OrderDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/orderedMeals/OrderedMealDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/orderedMeals/OrderedMealDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/RestaurantDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/model/restaurant/RestaurantDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/foodFinder/service/meal/MealServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/foodFinder/service/meal/MealServiceImpl.class" afterDir="false" />
-    </list>
+    <list default="true" id="fd6bc1e3-5b31-494c-84f0-be6f78bdde81" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,11 +76,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.13378906" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FoodFinder2" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.13908206" />
+    <property name="project.structure.side.proportion" value="0.3069467" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -117,7 +90,7 @@
       <recent name="C:\Users\uder\IdeaProjects\FoodFinder\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OptimisticLockingTest.shouldUpdate_withoutConcurrency">
+  <component name="RunManager" selected="JUnit.OptimisticLockingTest">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.foodFinder.Application" />
       <module name="FoodFinder" />
@@ -134,21 +107,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LostUpdateTest.checkingIfException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptimisticLockingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoodFinder" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LostUpdateTest" />
-      <option name="METHOD_NAME" value="checkingIfException" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foodFinder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.foodFinder" />
+      <option name="MAIN_CLASS_NAME" value="com.foodFinder.OptimisticLockingTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LostUpdateTest.shouldIncrementItemAmount_withoutConcurrency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OptimisticLockingTest.shouldUpdate_withoudConcurrency" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FoodFinder" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LostUpdateTest" />
-      <option name="METHOD_NAME" value="shouldIncrementItemAmount_withoutConcurrency" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.foodFinder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.foodFinder" />
+      <option name="MAIN_CLASS_NAME" value="com.foodFinder.OptimisticLockingTest" />
+      <option name="METHOD_NAME" value="shouldUpdate_withoudConcurrency" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -172,13 +156,16 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OptimisticLockingTest" />
+        <item itemvalue="JUnit.OptimisticLockingTest.shouldUpdate_withoudConcurrency" />
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.OptimisticLockingTest.shouldUpdate_withoutConcurrency" />
         <item itemvalue="JUnit.LostUpdateTest" />
-        <item itemvalue="JUnit.LostUpdateTest.shouldIncrementItemAmount_withoutConcurrency" />
-        <item itemvalue="JUnit.LostUpdateTest.checkingIfException" />
-        <item itemvalue="Application.Application" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -206,7 +193,9 @@
       <workItem from="1605807501006" duration="11191000" />
       <workItem from="1606158473129" duration="7732000" />
       <workItem from="1606168121826" duration="1018000" />
-      <workItem from="1606225299044" duration="761000" />
+      <workItem from="1606225299044" duration="15113000" />
+      <workItem from="1607029228174" duration="4980000" />
+      <workItem from="1607404195814" duration="1506000" />
     </task>
     <servers />
   </component>
@@ -227,18 +216,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="275" y="23" key="#Assign_Data_Sources" timestamp="1598352118569">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="23" key="#Assign_Data_Sources/0.0.1366.728@0.0.1366.728" timestamp="1598352118569" />
     <state x="275" y="23" key="#Project_Structure" timestamp="1605810197722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="23" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1605810197722" />
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598203114400">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1598203114400" />
     <state x="829" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1606166554755">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -251,70 +232,54 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="113" y="120" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599500290321" />
-    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1606163585629">
+    <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1607404509759">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606163585629" />
-    <state x="557" y="258" width="260" height="211" key="Github.ShareDialog" timestamp="1598259866415">
+    <state x="463" y="120" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607404509759" />
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="557" y="258" width="260" height="211" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598259866415" />
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom" timestamp="1606168108976">
+    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606168108976" />
-    <state width="1323" height="182" key="GridCell.Tab.0.center" timestamp="1606168108976">
+    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606168108976" />
-    <state width="1323" height="182" key="GridCell.Tab.0.left" timestamp="1606168108976">
+    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606168108976" />
-    <state width="1323" height="182" key="GridCell.Tab.0.right" timestamp="1606168108976">
+    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="182" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606168108976" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1600934307345">
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1600934307345" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1600934307345">
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1600934307345" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1600934307345">
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1607337620135">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1600934307345" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1600934307345">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1600934307345" />
-    <state x="263" y="100" key="IDE.errors.dialog" timestamp="1598517402256">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="263" y="100" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1598517402256" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1607337620135" />
     <state x="213" y="20" key="Maven.ArtifactSearchDialog" timestamp="1599209898926">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="20" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1599209898926" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1599493250219">
+    <state x="369" y="0" width="916" height="728" key="SettingsEditor" timestamp="1607404964264">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599493250219" />
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1603800419303">
+    <state x="369" y="0" width="916" height="728" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607404964264" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog" timestamp="1607404496812">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1603800419303" />
-    <state x="326" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1597990787192">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="326" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1597990787192" />
-    <state x="131" y="67" key="new project wizard" timestamp="1597938334439">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="131" y="67" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1597938334439" />
+    <state x="379" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1607404496812" />
     <state x="425" y="0" key="refactoring.ChangeSignatureDialog" timestamp="1599125945350">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -328,9 +293,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/foodFinder/service/email/SendGridEmailService.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/test/java/com/foodFinder/OptimisticLockingTest.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
