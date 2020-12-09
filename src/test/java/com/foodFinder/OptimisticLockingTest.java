@@ -61,7 +61,7 @@ public class OptimisticLockingTest {
             Optional<Customer> byId2 = repository.findById(id);
             //updating customer name
             byId1.get().setCustomerName("Patrycja");
-            byId2.get().setCustomerName("Pati");
+            byId2.get().setCustomerName("Patiii");
             repository.save(byId1.get());
             repository.save(byId2.get());
         } catch (ObjectOptimisticLockingFailureException ex) {
