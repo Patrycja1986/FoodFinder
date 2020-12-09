@@ -1,5 +1,6 @@
 package com.foodFinder;
 
+import com.foodFinder.repository.CustomerRepository;
 import com.foodFinder.service.email.EmailService;
 import com.foodFinder.service.email.SendGridEmailService;
 import com.sendgrid.SendGrid;
@@ -8,6 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.sendgrid.SendGridAutoConfiguration;
 import org.springframework.context.ApplicationContext;
@@ -23,11 +26,12 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 @SpringBootApplication
-public class Application {
 
+public class Application {
 
     public static void main(String[] args) throws IOException {
         ConfigurableApplicationContext app=SpringApplication.run(Application.class, args);
+
     }
 
     @Bean
