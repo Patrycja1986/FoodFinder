@@ -1,5 +1,6 @@
 package com.foodFinder;
 import com.foodFinder.model.customer.Customer;
+import com.foodFinder.model.customer.CustomerDTO;
 import com.foodFinder.repository.CustomerRepository;
 import com.foodFinder.service.customer.CustomerService;
 import org.junit.jupiter.api.AfterEach;
@@ -51,7 +52,7 @@ public class OptimisticLockingTest {
     }
 
     @Test
-    void shouldUpdate_withOptimisticLockingHandling() throws InterruptedException {
+    void updateCustomer_shouldThrowException() throws InterruptedException {
         boolean thrown = false;
         //checking if customers version=0
         Assertions.assertEquals(java.util.Optional.of(0L).get(), customer.getVersion());
@@ -65,10 +66,23 @@ public class OptimisticLockingTest {
             repository.save(byId1.get());
             repository.save(byId2.get());
         } catch (ObjectOptimisticLockingFailureException ex) {
+
     thrown=true;
         }
         Assertions.assertTrue(thrown);
-
+    }
+    @Test
+    public void updateCustomerTest_shouldUpdateWithOptimisticLockingHandling(){
+        Assertions.assertEquals(java.util.Optional.of(0L).get(), customer.getVersion());
+        CustomerDTO customerDTO1= new CustomerDTO();
+        CustomerDTO customerDTO2= new CustomerDTO();
+        customerDTO1.setCustomerName("Patrycja");
+        customerDTO2.setCustomerName("Pati");
+        service.updateCustomer(customerDTO1,id);
+        service.updateCustomer(customerDTO2,id);
+        Optional<Customer> byId = repository.findById(id);
+        Assertions.assertEquals(2L,byId.get().getVersion());
+        Assertions.assertEquals("Pati",byId.get().getCustomerName());
 
     }
 }
