@@ -9,6 +9,7 @@ import com.foodFinder.model.meal.MealDTO;
 import com.foodFinder.repository.CustomerRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -60,24 +61,37 @@ public class CustomerServiceImpl implements CustomerService {
                 "0", "0", "0", "0"));
         customerRepository.delete(customer);
     }
+
     @Override
     public void updateCustomer(CustomerDTO customerDTO, Long id) {
-        Optional<Customer> byId = customerRepository.findById(id);
-        if (byId.isPresent()) {
-            Customer customer = byId.get();
-            customer.setCustomerName(customerDTO.getCustomerName());
-            customer.setCustomerSurname(customerDTO.getCustomerSurname());
-            customer.setCustomerStreetName(customerDTO.getCustomerStreetName());
-            customer.setCustomerStreetNumber(customerDTO.getCustomerStreetNumber());
-            customer.setCustomerPostCode(customerDTO.getCustomerPostCode());
-            customer.setCustomerCity(customerDTO.getCustomerCity());
-            customer.setCustomerEmail(customerDTO.getCustomerEmail());
-            customerRepository.save(customer);
+        Optional<Customer> firstUpdateTry = customerRepository.findById(id);
+        if (firstUpdateTry.isPresent()) {
+            Customer customer1stTry=getCustomerDetails(customerDTO, firstUpdateTry);
+            try{
+                customerRepository.save(customer1stTry);
+            }catch(ObjectOptimisticLockingFailureException ex){
+               Optional<Customer> secondUpdateTry= customerRepository.findById(id);
+               Customer customer2ndTry = getCustomerDetails(customerDTO, secondUpdateTry);
+               customerRepository.save(customer2ndTry);
+            }
 
         } else {
             throw new ObjectNotFoundException("Customer by id= " + id + " not found");
         }
     }
+
+    private Customer getCustomerDetails(CustomerDTO customerDTO, Optional<Customer> firstUpdateTry) {
+        Customer customer = firstUpdateTry.get();
+        customer.setCustomerName(customerDTO.getCustomerName());
+        customer.setCustomerSurname(customerDTO.getCustomerSurname());
+        customer.setCustomerStreetName(customerDTO.getCustomerStreetName());
+        customer.setCustomerStreetNumber(customerDTO.getCustomerStreetNumber());
+        customer.setCustomerPostCode(customerDTO.getCustomerPostCode());
+        customer.setCustomerCity(customerDTO.getCustomerCity());
+        customer.setCustomerEmail(customerDTO.getCustomerEmail());
+        return customer;
+    }
+
     private CustomerDTO convertToDto(Customer customer) {
         return modelMapper.map(customer, CustomerDTO.class);
     }
