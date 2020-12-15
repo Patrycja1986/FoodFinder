@@ -32,8 +32,9 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void save(CustomerDTO customer) throws ParseException {
-        convertToEntity(customer);
+    public void save(CustomerDTO customerDTO) throws ParseException {
+        Customer customer = convertToEntity(customerDTO);
+        customerRepository.save(customer);
     }
 
     @Override

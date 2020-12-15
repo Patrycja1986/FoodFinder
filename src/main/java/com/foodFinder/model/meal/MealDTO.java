@@ -4,16 +4,12 @@ import com.foodFinder.model.restaurant.Restaurant;
 import com.foodFinder.model.restaurant.RestaurantDTO;
 
 public class MealDTO {
-private Long id;
-private Long version;
+    private Long id;
+    private Long version;
     private String mealName;
     private String mealDescription;
     private Long mealPrice;
     private Long mealQuantity;
-
-    public MealDTO(String mealName,Long mealPrice, Long mealQuantity) {
-        this.mealName = mealName;
-    }
 
 
     public Long getMealQuantity() {
@@ -23,6 +19,7 @@ private Long version;
     public void setMealQuantity(Long mealQuantity) {
         this.mealQuantity = mealQuantity;
     }
+
     public String getMealName() {
         return mealName;
     }

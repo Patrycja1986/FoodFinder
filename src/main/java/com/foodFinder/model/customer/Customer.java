@@ -2,7 +2,7 @@ package com.foodFinder.model.customer;
 
 import com.foodFinder.common.BaseEntity;
 import com.foodFinder.model.order.Order;
-import com.foodFinder.model.orderedMeals.OrderedMeal;
+import com.foodFinder.model.userLoginDetails.UserLoginDetails;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -11,27 +11,31 @@ import java.util.Set;
 public class Customer extends BaseEntity {
 
     private String customerName;
-    private  String customerSurname;
+    private String customerSurname;
     private String customerStreetName;
     private String customerStreetNumber;
     private String customerPostCode;
     private String customerCity;
     private String customerEmail;
 
+    @OneToOne(mappedBy = "customer")
+    private UserLoginDetails loginDetails;
+
     @OneToMany(mappedBy = "customer")
     private Set<Order> customerOrders;
 
     public Customer() {
     }
-    public Customer(String customerName,String customerSurname,String customerStreetName,
-                    String customerStreetNumber, String customerPostCode, String customerCity, String customerEmail){
-        this.customerName=customerName;
-        this.customerSurname=customerSurname;
-        this.customerStreetName=customerStreetName;
-        this.customerStreetNumber=customerStreetNumber;
-        this.customerPostCode=customerPostCode;
-        this.customerCity=customerCity;
-        this.customerEmail=customerEmail;
+
+    public Customer(String customerName, String customerSurname, String customerStreetName,
+                    String customerStreetNumber, String customerPostCode, String customerCity, String customerEmail) {
+        this.customerName = customerName;
+        this.customerSurname = customerSurname;
+        this.customerStreetName = customerStreetName;
+        this.customerStreetNumber = customerStreetNumber;
+        this.customerPostCode = customerPostCode;
+        this.customerCity = customerCity;
+        this.customerEmail = customerEmail;
     }
 
     public String getCustomerName() {

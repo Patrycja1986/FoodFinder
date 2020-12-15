@@ -22,11 +22,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+@EnableAutoConfiguration
 @SpringBootApplication
-
 public class Application {
 
     public static void main(String[] args) throws IOException {
@@ -47,5 +48,6 @@ public class Application {
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
+
 
 }
