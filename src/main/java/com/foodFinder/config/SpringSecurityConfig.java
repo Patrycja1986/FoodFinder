@@ -30,11 +30,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/customers/**", "/orders/**", "/orderedMeals/**").hasRole("USER")
                 .antMatchers("/*").permitAll()
-                /*.anyRequest()
+                .anyRequest()
                 .authenticated()
                 .and()
-                .httpBasic();*/
-                .and().formLogin();
+                .httpBasic()
+                /*.and().formLogin()*/;
     }
 
     @Bean
